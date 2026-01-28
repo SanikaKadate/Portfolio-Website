@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                overflow-y: hidden;
+            }
+            .split-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  .right {
+    flex: 1; /* Takes up 50% */
+    background-color:white;
+    padding: 20px;
+  }
+            .card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    height: 180px;
+    width: 500px;
+    background-color:#dd6e8e;
+    color: black;
+    font-weight: 100;
+}
+.card:hover 
+{ 
+    transform: scale(1.02); 
+}
+.link
+{
+    font-size: 17px;
+    text-decoration:underline;
+    color: white;
+}
+p
+{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+.right
+{
+    background-color:white;
+    padding: 20px;
+    position:relative;
+    width: 800px;
+    height: 400px;
+    border: none;
+    margin-top: 0px;
+    margin-left: 0px;
+    z-index: 1;
+}
+.landing-container {
+            /* Apply the animation here */
+            animation: fadeInUp 1.2s ease-out forwards;
+            opacity: 0; /* Starts invisible */
+        }
+        /* THE KEYFRAMES */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px); /* Start 30px lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+        </style>
+    </head>
+    <body>
+    <div class="landing-container">
+        <div class="split-container">
+        <div class="right">
+        <div class="card project">
+                <h3>Event Management System</h3>
+                <p>The Event Management System (EMS) is a web-based platform designed to simplify the planning, booking, and 
+                    management of events. Built using Java technologies, it provides a secure and scalable environment for both 
+                    organizers and attendees.</p>
+                <a href="#" class="link">View Code</a>
+            </div><br/><br/>
+            <div class="card project">
+                <h3>Employee Management Website</h3>
+                <p>An Employee Management System (EMS) using PHP and MySQL is a web application designed to streamline HR processes 
+                    by digitizing employee records, tracking performance, and managing payroll. It replaces traditional paper-based 
+                    filing with a centralized, secure database.<p>
+                <a href="#" class="link">View Code</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
